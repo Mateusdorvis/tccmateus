@@ -1,0 +1,71 @@
+* {
+    list-style: none;
+}
+
+.fa-brands {
+    margin: 12px;
+    padding: 12px;
+    transition: all 1s;
+    color: white;
+}
+
+.fa-brands:hover,
+.sites a:hover {
+    color: #FF0077;
+}
+
+.sites li {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+
+.sites,
+.copy {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-self: center;
+}
+
+.copy {
+    background-image: linear-gradient(to left, #260016, #FF0077);
+    border-top-left-radius: 50%;
+    width: 100%;
+}
+
+.sites a {
+    color: white;
+    transition: all 1s;
+}
+
+.imgredes,
+.redes {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+/* fim*/
+.copy img {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    padding: 4px;
+}
+
+.sites {
+    background-color: black;
+}
+

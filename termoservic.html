@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="bolt.svg">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos e condições do site</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    /* universal*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(12, 12, 12);
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    /* artigo */
+    .artigo {
+        padding: 20%;
+    }
+
+    .artigo h1 {
+        text-transform: uppercase;
+        padding: 2%;
+    }
+
+    /*header*/
+    nav.menu-lateral {
+        width: 80px;
+        height: 100%;
+        background-color: black;
+        padding: 40px 0px 30px 1%;
+        box-shadow: 3px 0 0 #FF0077;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: scroll;
+        padding-left: 5px;
+        z-index: 1;
+
+    }
+
+    nav.menu-lateral.expandir {
+        width: 300px;
+    }
+
+    .btn-expandir {
+        width: 100%;
+    }
+
+    .btn-expandir>i {
+        color: #FF0077;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+    }
+
+    ul li.item-menu {
+        transition: 1s;
+    }
+
+    ul li.ativo {
+        background-color: #392b3888;
+
+    }
+
+    ul li.item-menu:hover {
+        background-color: #FF007796;
+    }
+
+    ul li.item-menu a:hover {
+        transition: 1s;
+    }
+
+    ul li.item-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 4%;
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+
+    ul li.item-menu a .text-link {
+        margin-left: 40px;
+    }
+
+    ul li.item-menu a .icon>i {
+        font-size: 30px;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: black;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF0077;
+        border-radius: 400px;
+    }
+
+    .icones {
+        width: 50px;
+    }
+
+    .action {
+        grid-area: action;
+    }
+
+    .action {
+        border: 1px solid;
+        outline: none;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 12px;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        transition: all 2s;
+    }
+
+    .action:hover {
+        background-color: #fff;
+        color: #dd5e89;
+    }
+
+    /*principal */
+    .artigo li {
+        list-style-type: circle;
+        color: #FF0077;
+        float: left;
+        padding: 2%;
+        margin-left: 12%;
+    }
+
+    form {
+        padding: 5%;
+    }
+
+    .menuzinho {
+        display: none;
+    }
+
+    /*fim*/
+    /*botao topo*/
+
+    .go-top-btn {
+        position: fixed;
+        bottom: 35px;
+        right: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 60px;
+        width: 60px;
+        background: #000000;
+        border: 2px solid #FF0077;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .go-top-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /*pre carremanto*/
+    div.pre-carregamento {
+        width: 100%;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        transition: 1.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #carim {
+        width: 100px;
+    }
+
+    /*responsivo */
+
+    @media screen and (min-width:320px) and (max-width: 480px) {
+        * {
+            font-size: medium;
+        }
+       
+        .menu-lateral, .copy{
+            display: none;
+        }
+        .sites{
+            display: grid;
+            padding: 28.2%;
+            white-space: nowrap;
+        }
+        .listol{
+            padding: 7%;
+        }
+        .menuzinho {
+
+            padding: 0;
+            bottom: 0vh;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            background-color: #000;
+
+        }
+
+        .emagem {
+            margin: 0;
+            width: 50px;
+
+        }
+        
+    }
+
+    @media screen and (min-width:481px) and (max-width:768px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu-lateral, .copy{
+            display: none;
+        }
+        .sites{
+            display: grid;
+            padding: 28.2%;
+            white-space: nowrap;
+        }
+        
+        .listol{
+            padding: 7%;
+        }
+
+        .menuzinho {
+
+            padding: 0;
+            bottom: 0vh;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            background-color: #000;
+
+        }
+
+        .emagem {
+            margin: 0;
+            width: 50px;
+
+        }
+    }
+
+    /*fim*/
+</style>
+
+<body onload="preCarregamento();">
+    <!----precarregamento-->
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"> <img src="upsemfundo.png" alt="" id="carim"></div>
+    </div>
+    <!-----botao-->
+    <button class="go-top-btn">
+        <img src="upsemfundo.png" alt="arrow up">
+    </button>
+
+    <header>
+        <nav class="menu-lateral">
+
+            <div class="btn-expandir"><i class="bi bi-list" id="btn-exp"></i></div>
+            <ul>
+                <li class="item-menu ativo">
+                    <a href="home.html">
+                        <span class="icon"><img src="1.png" class="icones" alt=""></span>
+                        <span class="text-link">HOME</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="4.png" class="icones" alt=""></span>
+                        <span class="text-link">CINEMA</span>
+                    </a>
+                </li>
+
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="2.png" class="icones" alt=""></span>
+                        <span class="text-link">ESPORTES</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="3.png" class="icones" alt=""></span>
+                        <span class="text-link">TEATRO</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="sobre.html">
+                        <span class="icon"><img src="8.png" class="icones" alt=""></span>
+                        <span class="text-link">SOBRE</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="9.png" class="icones" alt=""></span>
+                        <span class="text-link">LOGIN</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="">
+                        <span class="icon"><img src="10.png" class="icones" alt=""></span>
+                        <span class="text-link">CARINHO</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article class="artigo">
+        <h1>Política de privacidade.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit iste voluptates porro ipsum dignissimos
+            eligendi esse cum ratione natus facilis magni, enim ad ipsa at voluptatem animi provident! Illum, ea? Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Mollitia provident, earum neque dolore tenetur amet
+            libero nisi deserunt recusandae iure saepe modi veritatis laboriosam, molestiae quisquam praesentium
+            exercitationem nihil voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium unde,
+            voluptatum at nobis libero, distinctio corrupti aut quos voluptas iste ea rerum doloribus vitae temporibus
+            odio necessitatibus. Quod, voluptates officia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat suscipit similique corrupti tenetur architecto molestiae quos est atque. Qui reprehenderit expedita
+            incidunt magni assumenda ipsam perspiciatis quas blanditiis. Necessitatibus, ut! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Odit reiciendis voluptates tempore esse dicta ducimus aliquam numquam ipsa
+            laboriosam id consequuntur, beatae veritatis culpa quibusdam iste perferendis corrupti iusto necessitatibus!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus incidunt ab adipisci ipsa rerum molestiae
+            sed alias et quasi corporis accusantium ullam consectetur voluptas pariatur consequatur in, nemo delectus
+            odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet exercitationem eligendi nisi dicta
+            sequi, eaque ducimus distinctio obcaecati explicabo dolorum eveniet debitis, iusto eius ut suscipit animi
+            culpa sed? Cumque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia pariatur dignissimos
+            veritatis sunt est dolorum, laboriosam sint voluptatibus, quibusdam obcaecati repudiandae a. Tenetur minus
+            commodi molestias nobis veniam. Dolor, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aut odio vitae eaque nisi repellendus iusto ipsam nesciunt a, minima, dignissimos totam praesentium dicta
+            quod placeat. Molestias rem corporis porro deserunt. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nesciunt, non alias porro hic mollitia ratione, sint nulla officiis repellendus praesentium optio
+            molestias ipsa itaque, rerum ea. Ullam nesciunt ducimus placeat?, Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Rem atque voluptatum natus est provident nihil voluptatibus error vel, consequuntur
+            voluptas non distinctio autem architecto accusamus possimus eius repellat, in vitae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, saepe consectetur, blanditiis numquam
+            possimus reiciendis totam commodi non similique animi ducimus eligendi repellat quasi enim delectus
+            perspiciatis illo ad ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse veritatis quis
+            perspiciatis sunt autem, neque eaque quae, corrupti delectus, quas distinctio repellat quos doloribus! Ut
+            dolorem iure nam totam expedita? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quos non
+            quaerat quisquam nemo! Earum sunt maiores tenetur autem! Repudiandae id aperiam suscipit molestiae magnam!
+            Suscipit dolores delectus fugiat quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi
+            nam doloribus nihil quaerat illum distinctio accusantium quisquam accusamus rerum cumque alias magni facere
+            maiores beatae iure quod molestiae vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            excepturi, reiciendis nihil sequi sint earum illum doloremque dolorem quod amet, veniam voluptate distinctio
+            id laudantium obcaecati ad accusamus? Aliquam, nisi? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Laborum consequuntur esse voluptate nemo nam, magni officia, eligendi molestias quibusdam aperiam sint
+            dolore, iste labore necessitatibus reprehenderit sit est et fugit. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Debitis odit ea minima ratione, totam, culpa possimus dignissimos magni earum est adipisci
+            sequi dolorem inventore aliquid consectetur praesentium maxime labore nobis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Eligendi nulla, laboriosam explicabo culpa error consequatur dicta assumenda
+            consequuntur tenetur, repellendus ut officia. Alias veritatis quod cupiditate rem, quo impedit quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium voluptas. Fugit libero modi
+            aspernatur facere magni quisquam sunt saepe accusantium, ratione animi a, maiores doloribus neque labore,
+            quam autem!
+        </p>
+        <br><br>
+        <h1> lorem</h1>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam id error praesentium quae, aliquid
+            veniam eius maiores laborum architecto quas illo, illum quibusdam aut quasi esse numquam et nulla?</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam id error praesentium quae, aliquid
+            veniam eius maiores laborum architecto quas illo, illum quibusdam aut quasi esse numquam et nulla?</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam id error praesentium quae, aliquid
+            veniam eius maiores laborum architecto quas illo, illum quibusdam aut quasi esse numquam et nulla?</li>
+        <br><br><br><br><br><br>
+        <h1>termos e condições do site.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit iste voluptates porro ipsum dignissimos
+            eligendi esse cum ratione natus facilis magni, enim ad ipsa at voluptatem animi provident! Illum, ea? Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Mollitia provident, earum neque dolore tenetur amet
+            libero nisi deserunt recusandae iure saepe modi veritatis laboriosam, molestiae quisquam praesentium
+            exercitationem nihil voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium unde,
+            voluptatum at nobis libero, distinctio corrupti aut quos voluptas iste ea rerum doloribus vitae temporibus
+            odio necessitatibus. Quod, voluptates officia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat suscipit similique corrupti tenetur architecto molestiae quos est atque. Qui reprehenderit expedita
+            incidunt magni assumenda ipsam perspiciatis quas blanditiis. Necessitatibus, ut! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Odit reiciendis voluptates tempore esse dicta ducimus aliquam numquam ipsa
+            laboriosam id consequuntur, beatae veritatis culpa quibusdam iste perferendis corrupti iusto necessitatibus!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus incidunt ab adipisci ipsa rerum molestiae
+            sed alias et quasi corporis accusantium ullam consectetur voluptas pariatur consequatur in, nemo delectus
+            odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet exercitationem eligendi nisi dicta
+            sequi, eaque ducimus distinctio obcaecati explicabo dolorum eveniet debitis, iusto eius ut suscipit animi
+            culpa sed? Cumque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia pariatur dignissimos
+            veritatis sunt est dolorum, laboriosam sint voluptatibus, quibusdam obcaecati repudiandae a. Tenetur minus
+            commodi molestias nobis veniam. Dolor, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aut odio vitae eaque nisi repellendus iusto ipsam nesciunt a, minima, dignissimos totam praesentium dicta
+            quod placeat. Molestias rem corporis porro deserunt. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nesciunt, non alias porro hic mollitia ratione, sint nulla officiis repellendus praesentium optio
+            molestias ipsa itaque, rerum ea. Ullam nesciunt ducimus placeat?, Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Rem atque voluptatum natus est provident nihil voluptatibus error vel, consequuntur
+            voluptas non distinctio autem architecto accusamus possimus eius repellat, in vitae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, saepe consectetur, blanditiis numquam
+            possimus reiciendis totam commodi non similique animi ducimus eligendi repellat quasi enim delectus
+            perspiciatis illo ad ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse veritatis quis
+            perspiciatis sunt autem, neque eaque quae, corrupti delectus, quas distinctio repellat quos doloribus! Ut
+            dolorem iure nam totam expedita? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quos non
+            quaerat quisquam nemo! Earum sunt maiores tenetur autem! Repudiandae id aperiam suscipit molestiae magnam!
+            Suscipit dolores delectus fugiat quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi
+            nam doloribus nihil quaerat illum distinctio accusantium quisquam accusamus rerum cumque alias magni facere
+            maiores beatae iure quod molestiae vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            excepturi, reiciendis nihil sequi sint earum illum doloremque dolorem quod amet, veniam voluptate distinctio
+            id laudantium obcaecati ad accusamus? Aliquam, nisi? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Laborum consequuntur esse voluptate nemo nam, magni officia, eligendi molestias quibusdam aperiam sint
+            dolore, iste labore necessitatibus reprehenderit sit est et fugit. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Debitis odit ea minima ratione, totam, culpa possimus dignissimos magni earum est adipisci
+            sequi dolorem inventore aliquid consectetur praesentium maxime labore nobis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Eligendi nulla, laboriosam explicabo culpa error consequatur dicta assumenda
+            consequuntur tenetur, repellendus ut officia. Alias veritatis quod cupiditate rem, quo impedit quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium voluptas. Fugit libero modi
+            aspernatur facere magni quisquam sunt saepe accusantium, ratione animi a, maiores doloribus neque labore,
+            quam autem!
+        </p>
+        <br><br>
+        <h1>termos e condições do site.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit iste voluptates porro ipsum dignissimos
+            eligendi esse cum ratione natus facilis magni, enim ad ipsa at voluptatem animi provident! Illum, ea? Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Mollitia provident, earum neque dolore tenetur amet
+            libero nisi deserunt recusandae iure saepe modi veritatis laboriosam, molestiae quisquam praesentium
+            exercitationem nihil voluptas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium unde,
+            voluptatum at nobis libero, distinctio corrupti aut quos voluptas iste ea rerum doloribus vitae temporibus
+            odio necessitatibus. Quod, voluptates officia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat suscipit similique corrupti tenetur architecto molestiae quos est atque. Qui reprehenderit expedita
+            incidunt magni assumenda ipsam perspiciatis quas blanditiis. Necessitatibus, ut! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Odit reiciendis voluptates tempore esse dicta ducimus aliquam numquam ipsa
+            laboriosam id consequuntur, beatae veritatis culpa quibusdam iste perferendis corrupti iusto necessitatibus!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus incidunt ab adipisci ipsa rerum molestiae
+            sed alias et quasi corporis accusantium ullam consectetur voluptas pariatur consequatur in, nemo delectus
+            odio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet exercitationem eligendi nisi dicta
+            sequi, eaque ducimus distinctio obcaecati explicabo dolorum eveniet debitis, iusto eius ut suscipit animi
+            culpa sed? Cumque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia pariatur dignissimos
+            veritatis sunt est dolorum, laboriosam sint voluptatibus, quibusdam obcaecati repudiandae a. Tenetur minus
+            commodi molestias nobis veniam. Dolor, corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aut odio vitae eaque nisi repellendus iusto ipsam nesciunt a, minima, dignissimos totam praesentium dicta
+            quod placeat. Molestias rem corporis porro deserunt. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nesciunt, non alias porro hic mollitia ratione, sint nulla officiis repellendus praesentium optio
+            molestias ipsa itaque, rerum ea. Ullam nesciunt ducimus placeat?, Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Rem atque voluptatum natus est provident nihil voluptatibus error vel, consequuntur
+            voluptas non distinctio autem architecto accusamus possimus eius repellat, in vitae.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, saepe consectetur, blanditiis numquam
+            possimus reiciendis totam commodi non similique animi ducimus eligendi repellat quasi enim delectus
+            perspiciatis illo ad ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse veritatis quis
+            perspiciatis sunt autem, neque eaque quae, corrupti delectus, quas distinctio repellat quos doloribus! Ut
+            dolorem iure nam totam expedita? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quos non
+            quaerat quisquam nemo! Earum sunt maiores tenetur autem! Repudiandae id aperiam suscipit molestiae magnam!
+            Suscipit dolores delectus fugiat quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nisi
+            nam doloribus nihil quaerat illum distinctio accusantium quisquam accusamus rerum cumque alias magni facere
+            maiores beatae iure quod molestiae vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            excepturi, reiciendis nihil sequi sint earum illum doloremque dolorem quod amet, veniam voluptate distinctio
+            id laudantium obcaecati ad accusamus? Aliquam, nisi? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Laborum consequuntur esse voluptate nemo nam, magni officia, eligendi molestias quibusdam aperiam sint
+            dolore, iste labore necessitatibus reprehenderit sit est et fugit. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Debitis odit ea minima ratione, totam, culpa possimus dignissimos magni earum est adipisci
+            sequi dolorem inventore aliquid consectetur praesentium maxime labore nobis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Eligendi nulla, laboriosam explicabo culpa error consequatur dicta assumenda
+            consequuntur tenetur, repellendus ut officia. Alias veritatis quod cupiditate rem, quo impedit quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium voluptas. Fugit libero modi
+            aspernatur facere magni quisquam sunt saepe accusantium, ratione animi a, maiores doloribus neque labore,
+            quam autem!
+        </p>
+        <form action="sobre.html" method="post">
+            <input type="checkbox" id="input">
+            <label for="input">Concordo com os termos. </label>
+            <br><br>
+            <input type="checkbox" id="input">
+            <label for="input">Não concordo com os termos.</label>
+        </form>
+
+    </article>
+    <script>
+        var menuItem = document.querySelectorAll('.item-menu')
+
+        function selectLink() {
+            menuItem.forEach((item) =>
+                item.classList.remove('ativo')
+            )
+            this.classList.add('ativo')
+        }
+
+        menuItem.forEach((item) =>
+            item.addEventListener('click', selectLink)
+        )
+
+        var btnExp = document.querySelector('#btn-exp')
+        var menuSide = document.querySelector('.menu-lateral')
+
+        btnExp.addEventListener('click', function () {
+            menuSide.classList.toggle('expandir')
+        })
+
+        // botao //
+        const goTopBtn = document.querySelector('.go-top-btn');
+
+        window.addEventListener('scroll', checkHeight);
+
+        function checkHeight() {
+            if (window.scrollY > 200) {
+                goTopBtn.style.display = "flex"
+            } else {
+                goTopBtn.style.display = "none"
+            }
+        }
+
+        goTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        });
+
+        // carregamento //
+        const pre_carregamento = document.querySelector(".pre-carregamento");
+
+        function preCarregamento() {
+            pre_carregamento.style.opacity = "0";
+
+            setTimeout(() => {
+                pre_carregamento.style.display = "none";
+            }, 500);
+        }
+    </script>
+    <footer>
+        <div class="sites">
+            <div>
+                <ol class="listol">
+                    <h1>OUTRAS PÁGINAS</h1>
+                    <li><a href="termoservic.html">Termos e Condições</a></li>
+                    <li><a href="#">Mapa do Site</a></li>
+                </ol>
+            </div>
+            <ol class="listol">
+                <h2>FORMAS DE PAGAMENTO</h2>
+                <div>
+                    <li><a href="#"><img src="pix.png" class="redes"></a></li>
+                </div>
+            </ol>
+            <div class="links">
+                <a href="#"><img src="email.png" class="redes imgredes" alt=""></a>
+                <a href="#"><img src="insta2.png" class="redes imgredes" alt=""></a>
+            </div>
+        </div>
+        <div class="copy">
+
+            <!--<a href=""><img src="upsemfundo.png" alt=""></a>-->
+            <h1 style="color: white; text-shadow: 2px 2px black; font-size: 4rem; text-transform: capitalize; padding-top: 20px;">level up</h1>
+            <p>Todos os direitos reservados para a página level up 2023&reg;&copy;.</p>
+        </div>
+    </footer>
+
+    <div class="menuzinho">
+        <div class="esporte"> <a href="#"> <img src="1.png" alt="" class="emagem"></a> </div>
+        <div class="teatro"><a href="#"> <img src="2.png" alt="" class="emagem"></a> </div>
+        <div class="nsei"><a href="index.html"> <img src="3.png" alt="" class="emagem"></a> </div>
+        <div class="cinema"> <a href="#"> <img src="4.png" alt="" class="emagem"></a></div>
+        <div class="musica"><a href="musc.html"> <img src="6.png" alt="" class="emagem"></a> </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sobre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 900vh;
+        background-color: black;
+    }
+
+    h1 {
+        color: #FF0077;
+        text-align: center;
+        background-color: azure;
+        padding: 50px;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    section {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .imagam {
+        width: 150px;
+        height: 150px;
+        margin-left: 50px;
+    }
+
+    nav.menu-lateral {
+        width: 80px;
+        height: 100%;
+        background-color: black;
+        padding: 40px 0px 30px 1%;
+        box-shadow: 3px 0 0 #FF0077;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: scroll;
+        padding-left: 5px;
+    }
+
+    nav.menu-lateral.expandir {
+        width: 300px;
+    }
+
+    .btn-expandir {
+        width: 100%;
+    }
+
+    .btn-expandir>i {
+        color: #FF0077;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+    }
+
+    ul li.item-menu {
+        transition: 1s;
+    }
+
+    ul li.ativo {
+        background-color: #392b3888;
+    }
+
+    ul li.item-menu:hover {
+        background-color: #Ff0077;
+
+    }
+
+    ul li.item-menu a:hover {
+        color: black;
+        transition: 1s;
+    }
+
+    ul li.item-menu a {
+        color: #Ff0077;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 4%;
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+
+    ul li.item-menu a .text-link {
+        margin-left: 40px;
+    }
+
+    ul li.item-menu a .icon>i {
+        font-size: 30px;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: black;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF0077;
+    }
+
+    .icones {
+        width: 50px;
+    }
+</style>
+
+<body>
+
+    <nav class="menu-lateral">
+        <div class="btn-expandir"><i class="bi bi-list" id="btn-exp"></i></div>
+        <ul>
+            <li class="item-menu ativo">
+                <a href="#">
+                    <span class="icon"><img src="https://www.linkedin.com/dms/D4D06AQH-t-iTR6VXTQ/messaging-attachmentFile/0/1686077278503?m=AQKhITgqg1gAYAAAAYiSEQyV-MH_G4eBlUbDlIuqq69h8E4ZunaTWMRJUw&ne=1&v=beta&t=S325zsP1dT3Rl3vLWjXQzWHq5vTpvGauYmwa-6yrUMU" class="icones" alt=""></span>
+                    <span class="text-link">HOME</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/5.png" class="icones" alt=""></span>
+                    <span class="text-link">CINEMA</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/4.png" class="icones" alt=""></span>
+                    <span class="text-link">GAMES</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/2.png" class="icones" alt=""></span>
+                    <span class="text-link">ESPORTES</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/6.png" class="icones" alt=""></span>
+                    <span class="text-link">TEATRO</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/8.png" class="icones" alt=""></span>
+                    <span class="text-link">SOBRE</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><img src="icones/9.png" class="icones" alt=""></span>
+                    <span class="text-link">LOGIN</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <script>
+        var menuItem = document.querySelectorAll('.item-menu')
+
+        function selectLink() {
+            menuItem.forEach((item) =>
+                item.classList.remove('ativo')
+            )
+            this.classList.add('ativo')
+        }
+
+        menuItem.forEach((item) =>
+            item.addEventListener('click', selectLink)
+        )
+
+        var btnExp = document.querySelector('#btn-exp')
+        var menuSide = document.querySelector('.menu-lateral')
+
+        btnExp.addEventListener('click', function () {
+            menuSide.classList.toggle('expandir')
+        })
+
+
+    </script>
+</body>
+
+</html>

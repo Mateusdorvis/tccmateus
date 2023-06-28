@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="login.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <title>Sobre</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        background-size: cover;
+        font-size: 20px;
+    }
+
+    body {
+
+        font-family: 'Roboto', sans-serif;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(12, 12, 12);
+        color: white;
+
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /* card */
+
+    .card {
+        width: 350px;
+        height: 500px;
+        border-radius: 40px;
+        box-shadow: 0 0 20px 2px #FF0077;
+    }
+
+    .card h1 {
+        padding: 12%;
+        font-weight: bolder;
+    }
+
+    /*FOOTER PÁGINA SOBRE*/
+
+    img {
+        width: 100%;
+    }
+
+    .imgdiv {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        margin-top: -60px;
+
+    }
+
+
+    .card a {
+        width: 200px;
+        height: 100px;
+        background: #ba01ff;
+        color: white;
+        padding: 12px;
+        border-radius: 4px;
+        transition: all 0.7s;
+        font-weight: 900;
+        text-shadow: 2px 2px red;
+        text-transform: uppercase;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .card a:hover {
+        background-color: white;
+        color: #ce1446;
+        text-shadow: none;
+    }
+
+
+
+    .portfolio h1 {
+        color: white;
+    }
+
+    .portfolio button {
+        margin-left: 45%;
+        background-color: white;
+        color: #310a26;
+        padding: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: none;
+        transition: all 0.7s;
+        cursor: pointer;
+        border-radius: 12px;
+        box-shadow: 4px 0 0 4px rgba(0, 0, 0, 0.791);
+    }
+
+    .portfolio button:hover {
+        background-color: #FF0077;
+        color: white;
+    }
+
+    footer {
+        background-color: #000000be;
+        width: 100%;
+        background-image: url(https://images.squarespace-cdn.com/content/v1/5343d585e4b077ee2eda39ff/1589534127562-VPCJHFB0FW1M5NY2OURT/Zoom-Top-Image3.gif?format=1000w);
+        background-attachment: fixed;
+        background-position: center;
+        background-blend-mode: saturation;
+
+    }
+
+
+
+    /*  .sites {
+        background-color: #Ff0077;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        padding-left: 12%;
+        padding-right: 12%;
+        flex-direction: row-reverse;
+
+    }
+
+    .sites h1 {
+        font-weight: 900;
+    }
+
+    .sites a {
+        color: white;
+        transition: all 1s;
+    }*/
+    /* footer padrao*/
+    .sites li {
+        text-align: center;
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+
+    .menuzinho {
+        display: none;
+    }
+
+    .sites,
+    .copy {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        align-self: center;
+        font-family: 'Roboto';
+    }
+
+    .sites a {
+        color: white;
+        transition: all 1s;
+    }
+
+    .imgredes,
+    .redes {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 100%;
+        transition: 0.5s;
+    }
+
+    .listol h1,
+    .listol h2 {
+        text-transform: uppercase;
+    }
+
+    /* fim*/
+    .copy img {
+        background-color: white;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        padding: 4px;
+    }
+
+    .copy {
+        background-image: linear-gradient(to left, #260016, #FF0077);
+        border-top-left-radius: 50%;
+        width: 100%;
+    }
+    .site{
+        background-color: black;
+    }
+
+    .portfolio {
+        padding: 10%;
+    }
+
+    .portfolio h1 {
+        text-transform: uppercase;
+    }
+
+    .port1,
+    .port2.active {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5%;
+    }
+
+    .port2 {
+        display: none;
+    }
+
+    /*MENU LATERAL*/
+
+    nav.menu-lateral {
+        width: 80px;
+        height: 100%;
+        background-color: black;
+        padding: 40px 0px 30px 1%;
+        box-shadow: 3px 0 0 #FF0077;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: scroll;
+        padding-left: 5px;
+        z-index: 1;
+
+    }
+
+    nav.menu-lateral.expandir {
+        width: 300px;
+    }
+
+    .btn-expandir {
+        width: 100%;
+    }
+
+    .btn-expandir>i {
+        color: #FF0077;
+        cursor: pointer;
+        font-size: 50px;
+        padding-left: 5px;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+    }
+
+    ul li.item-menu {
+        transition: 1s;
+    }
+
+    ul li.ativo {
+        background-color: #392b3888;
+
+    }
+
+    ul li.item-menu:hover {
+        background-color: #FF007796;
+    }
+
+    ul li.item-menu a:hover {
+        transition: 1s;
+    }
+
+    ul li.item-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 20px 4%;
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 40px;
+    }
+
+    ul li.item-menu a .text-link {
+        margin-left: 40px;
+    }
+
+    ul li.item-menu a .icon>i {
+        font-size: 30px;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: black;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #FF0077;
+        border-radius: 400px;
+    }
+
+    .icones {
+        width: 50px;
+    }
+
+    .action {
+        grid-area: action;
+    }
+
+    .action {
+        border: 1px solid;
+        outline: none;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        transition: all 2s;
+    }
+
+    .action:hover {
+        background-color: #fff;
+        color: #dd5e89;
+    }
+
+    /*fim*/
+    /*icones do footer*/
+
+    .fa-brands {
+        margin: 12px;
+        padding: 12px;
+        transition: all 1s;
+        color: white;
+    }
+
+    .fa-brands:hover,
+    .sites a:hover {
+        color: #FF0077;
+    }
+
+    /* FIM */
+    /*CONTEUDO PRINCIPAL*/
+
+    .artigo {
+        padding: 20%;
+    }
+
+    /*FIM*/
+    /*RESPONSABILIDADE*/
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        * {
+            font-size: 0.9rem;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sites h1,
+        .sites h2 {
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+
+        .menu-lateral, .copy{
+            display: none;
+        }
+
+        .go-top-btn {
+            width: 20px;
+            height: 20px;
+        }
+
+        .sites,
+        .port1,
+        .port2.active {
+            display: grid;
+        }
+
+        .sites {
+            padding: 30%;
+            white-space: nowrap;
+        }
+
+        .card {
+            width: 200px;
+            height: 400px;
+            margin: 40px;
+        }
+
+        .menuzinho {
+            padding: 0;
+            bottom: 0vh;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            background-color: #000;
+
+        }
+
+        .emagem {
+            margin: 0;
+            width: 50px;
+
+        }
+
+        .listol {
+            padding: 10%;
+        }
+    }
+
+    @media screen and (min-width:481px) and (max-width:768px) {
+        * {
+            font-size: 1rem;
+        }
+
+        .menuzinho {
+
+            padding: 0;
+            bottom: 0vh;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            background-color: #000;
+
+        }
+
+        .emagem {
+            margin: 0;
+            width: 50px;
+
+        }
+
+        .menu-lateral, .copy {
+            display: none;
+        }
+
+        .sites,
+        .port1,
+        .port2.active {
+            display: grid;
+            padding: 10%;
+
+        }
+
+        .card {
+            width: 350px;
+            margin: 40px;
+        }
+
+        .listol {
+            padding: 9%;
+            white-space: nowrap;
+        }
+
+    }
+
+    @media screen and (min-width:769px) and (max-width:1024px) {
+        * {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            margin-right: 4%;
+        }
+
+        .sites,
+        .copy {
+            padding: 7%;
+        }
+        .imgdiv{
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (min-width:1025px) and (max-width:2000px) {
+
+        .card {
+            margin-right: 4%;
+
+        }
+
+        .sites,
+        .copy {
+            padding: 3%;
+        }
+        
+    }
+
+    /*fim*/
+
+    /*topo*/
+
+    .go-top-btn {
+        position: fixed;
+        bottom: 35px;
+        right: 35px;
+        border-radius: 100%;
+        cursor: pointer;
+        height: 60px;
+        width: 60px;
+        background: #000000;
+        border: 2px solid #FF0077;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .go-top-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /*pre carregamento */
+
+    div.pre-carregamento {
+        width: 100%;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        transition: 1.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #carim {
+        width: 100px;
+    }
+</style>
+
+<body onload="preCarregamento();">
+
+    <!----carregamento-->
+    <div class="pre-carregamento">
+        <div class="efeito-carregamento"> <img src="upsemfundo.png" alt="" id="carim"></div>
+    </div>
+    <!----topo-->
+    <button class="go-top-btn">
+        <img src="upsemfundo.png" alt="arrow up">
+    </button>
+
+    <!---fim-->
+
+    <header>
+        <nav class="menu-lateral">
+
+            <div class="btn-expandir"><i class="bi bi-list" id="btn-exp"></i></div>
+            <ul>
+                <li class="item-menu ativo">
+                    <a href="home.html">
+                        <span class="icon"><img src="1.png" class="icones" alt=""></span>
+                        <span class="text-link">HOME</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="4.png" class="icones" alt=""></span>
+                        <span class="text-link">CINEMA</span>
+                    </a>
+                </li>
+
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="2.png" class="icones" alt=""></span>
+                        <span class="text-link">ESPORTES</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="3.png" class="icones" alt=""></span>
+                        <span class="text-link">TEATRO</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="sobre.html">
+                        <span class="icon"><img src="8.png" class="icones" alt=""></span>
+                        <span class="text-link">SOBRE</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><img src="9.png" class="icones" alt=""></span>
+                        <span class="text-link">LOGIN</span>
+                    </a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="">
+                        <span class="icon"><img src="10.png" class="icones" alt=""></span>
+                        <span class="text-link">CARINHO</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article class="artigo">
+        <h1>Sobre o site</h1>
+        <br><br>
+        <p class="multipleStrings">O site foi desenvolvido por alunos do curso gratuito de programação full stack, cujo
+            este curso é oferecido pelo <a href="#"><span style="color: #FF0077;">Instituito da
+                    Opurtinidade Social (IOS)</span></a>, além disso, objetivo deste nosso site é vender ingressos de
+            principais eventos que ocorrem na cidade de <span style="color: #ff1f78;">Porto alegre e região
+                metropolitana</span>. Por outro lado, vocë notará que abaixo tem o link do portfolio de cada integrante
+            do grupo, como também, mostra o que cada um fez no site.</p>
+    </article>
+    <footer>
+        <div class="portfolio">
+            <h1> Portfolio dos devs.<i class="fa-solid fa-users fa-beat fa-2xl" style="color: #ffffff;"></i></h1>
+            <br><br>
+            <section class="port port1">
+                <div class=" card card1" data-aos="fade-left">
+                    <img src="Carol.png" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class="imgdiv" alt="">
+                    <h1>Carol Schmidt</h1>
+                    <a href="https://carolyneios.github.io/Carolyne/">acessar</a>
+                </div>
+                <div class=" card card2" data-aos="fade-right">
+                    <img src="Davi.png" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class="imgdiv" alt="">
+                    <h1>Davi dos Santos Mesquita</h1>
+                    <a href="https://dav1sz.github.io/Portfolio/#">acessar</a>
+                </div>
+                <div class=" card card3" data-aos="fade-up">
+                    <img src="lucas.PNG" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class="imgdiv" alt="">
+                    <h1>Lucas Rosa Kuh</h1>
+                    <a href="https://lucasgl25.github.io/LRK25/">acessar</a>
+                </div>
+            </section>
+            <br><br>
+            <button id="button">carregar Mais</button>
+            <section class="port port2">
+                <div class=" card card4">
+                    <img src="emerson.png" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class="imgdiv" alt="">
+                    <h1>Émerson Henrique</h1>
+                    <a href="https://emerson14machado.github.io/Portifolio/">acessar</a>
+                </div>
+                <div class=" card card5">
+                    <img src="Kaua.png" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class="imgdiv" alt="">
+                    <h1>Kauã Rodrigues</h1>
+                    <a href="https://kauarsantos.github.io/portfolio/">acessar</a>
+                </div>
+                <div class=" card card6">
+                    <img src="mateus.png" alt="">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg"
+                        class=" imgdiv imgdiv6" alt="">
+                    <h1>Mateus da Silva Dorvis</h1>
+
+                    <a href="https://mateusdorvis.github.io/htmlp4/">acessar</a>
+                </div>
+            </section>
+        </div>
+        <section class="site">
+            <div class="sites">
+                <div>
+                    <ol class="listol">
+                        <h1>Outras páginas</h1>
+                        <li><a href="termoservic.html">Termos e Condições</a></li>
+                        <li><a href="#">Mapa do Site</a></li>
+                    </ol>
+                </div>
+               
+                <ol class="listol">
+                    <img src="" alt="">
+                    <h1>Contato</h1>
+                    <li><a href="#">Carol Schidmt</a></li>
+                    <li><a href="#">Davi dos Santos</a></li>
+                    <li><a href="#">Lucas</a></li>
+                    <li><a href="#">Émerson</a></li>
+                    <li><a href="#">Mateus Dorvis</a></li>
+                    <li><a href="#">Kauã</a></li>
+                </ol>
+                <ol class="listol">
+                    <h2>Formas de pagamento</h2>
+                    <div>
+                        <li><a href="#"><img src="pix.png" class="redes"></a></li>
+                    </div>
+                </ol>
+                <div class="links">
+                    <a href="#"><img src="email.png" class="redes imgredes" alt=""></a>
+                    <a href="#"><img src="insta2.png" class="redes imgredes" alt=""></a>
+                </div>
+            </div>
+            <div class="copy">
+
+                <!--<a href=""><img src="upsemfundo.png" alt=""></a>-->
+                <h1 style="color: white; text-shadow: 2px 2px black; font-size: 4rem; text-transform: capitalize;">level up</h1>
+                <p>Todos os direitos reservados para a página level up 2023&reg;&copy;.</p>
+
+            </div>
+        </section>
+    </footer>
+    <div class="menuzinho">
+        <div class="esporte"> <a href="#"> <img src="1.png" alt="" class="emagem"></a> </div>
+        <div class="teatro"><a href="#"> <img src="2.png" alt="" class="emagem"></a> </div>
+        <div class="nsei"><a href="index.html"> <img src="3.png" alt="" class="emagem"></a> </div>
+        <div class="cinema"> <a href="#"> <img src="4.png" alt="" class="emagem"></a></div>
+        <div class="musica"><a href="musc.html"> <img src="6.png" alt="" class="emagem"></a> </div>
+    </div>
+
+    <script>
+        const button = document.getElementById('button');
+
+        const port2 = document.querySelector('.port2');
+
+        button.addEventListener('click', () => {
+            port2.classList.toggle('active');
+
+        });
+        var menuItem = document.querySelectorAll('.item-menu')
+
+        // header //
+        function selectLink() {
+            menuItem.forEach((item) =>
+                item.classList.remove('ativo')
+            );
+            this.classList.add('ativo');
+        }
+
+        menuItem.forEach((item) =>
+            item.addEventListener('click', selectLink)
+        );
+
+        var btnExp = document.querySelector('#btn-exp');
+        var menuSide = document.querySelector('.menu-lateral');
+
+        btnExp.addEventListener('click', function () {
+            menuSide.classList.toggle('expandir')
+        });
+        //animacção cards//
+
+        AOS.init();
+
+        // animação letras //
+
+        new TypeIt(".multipleStrings", {
+            strings: [""],
+            speed: 50,
+            waitUntilVisible: true,
+        }).go();
+
+        //botao do topo//
+
+        const goTopBtn = document.querySelector('.go-top-btn');
+
+        window.addEventListener('scroll', checkHeight);
+
+        function checkHeight() {
+            if (window.scrollY > 200) {
+                goTopBtn.style.display = "flex"
+            } else {
+                goTopBtn.style.display = "none"
+            }
+        }
+
+        goTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        });
+
+
+        // carregamento //
+        const pre_carregamento = document.querySelector(".pre-carregamento");
+
+        function preCarregamento() {
+            pre_carregamento.style.opacity = "0";
+
+            setTimeout(() => {
+                pre_carregamento.style.display = "none";
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>
